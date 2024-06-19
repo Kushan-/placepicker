@@ -12,7 +12,7 @@ export default function DeleteConfirmation({ onConfirm, onCancel }) {
       console.log('cleaning up timer')
       clearTimeout(setTimer)
     }
-
+    // using calback when passing function as a dependencies
   }, [onConfirm]) //pointing at the dependency
   
   return (
