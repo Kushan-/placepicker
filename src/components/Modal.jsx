@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { useRef } from 'react';
+import { useEffect , useRef} from 'react';
 import { createPortal } from 'react-dom';
 
 const Modal=({ open, children, onClose}) =>{
@@ -13,7 +12,7 @@ const Modal=({ open, children, onClose}) =>{
   //dialog.current.showModal(); // for modal overlay
   return createPortal(
     <dialog className="modal" ref={dialog} onClose={onClose}> 
-      {children}
+      {open ? children : null}
     </dialog>,
     document.getElementById('modal')
   );
